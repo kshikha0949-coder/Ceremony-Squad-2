@@ -128,7 +128,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .header {
   position: fixed; top: 0; left: 0; right: 0;
   z-index: 900;
-  transition: background .4s ease, backdrop-filter .4s ease, box-shadow .4s ease;
+  background-color: rgba(250,247,242,.93);
 }
 .header.scrolled {
   background: rgba(250,247,242,.93);
@@ -136,13 +136,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 1px 0 var(--beige-dark);
 }
-.nav { display: flex; align-items: center; justify-content: space-between; height: var(--nav-h); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: var(--nav-h); background:rgba(250,247,242,.93); }
 .nav-logo {
   font-family: var(--font-serif);
   font-size: 1.4rem;
   font-weight: 400;
   letter-spacing: .04em;
-  color: var(--white);
+  color: rgba(12, 11, 11, 0.953);
   transition: color .3s;
 }
 .header.scrolled .nav-logo { color: var(--charcoal); }
@@ -153,7 +153,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 400;
   letter-spacing: .13em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.8);
+  color: rgba(12, 11, 11, 0.953);
   position: relative;
   padding-bottom: 2px;
   transition: color .3s;
@@ -236,8 +236,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   letter-spacing: .1em;
   text-transform: uppercase;
   color: rgba(255,255,255,.75);
-  background: rgba(255,255,255,.06);
-  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.466);
+  
   transition: var(--transition);
 }
 .pill:hover { background: var(--gold); border-color: var(--gold); color: var(--white); }
