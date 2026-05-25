@@ -7,6 +7,12 @@
   <meta name="keywords" content="wedding planning services, luxury event management, destination wedding, corporate events India" />
   <title>Services | Ceremony Squad</title>
   <link rel="stylesheet" href="services.css" />
+  <noscript>
+    <style>
+      .reveal-up, .reveal-left, .reveal-right { opacity: 1 !important; transform: none !important; }
+      .animate-in { opacity: 1 !important; transform: none !important; animation: none !important; }
+    </style>
+  </noscript>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -135,7 +141,7 @@
               <span class="pkg-desc">Unlimited scope + team</span>
             </div>
           </div>
-          <a href="index.html#contact" class="btn btn-primary">Plan Your Wedding</a>
+          <button class="btn btn-primary query-btn" data-service="Wedding Planning">Send a Query ◆</button>
         </div>
       </div>
     </section>
@@ -168,7 +174,7 @@
             <span class="dtag">Kerala</span>
             <span class="dtag">+ More</span>
           </div>
-          <a href="index.html#contact" class="btn btn-primary">Explore Destinations</a>
+          <button class="btn btn-primary query-btn" data-service="Destination Events">Send a Query ◆</button>
         </div>
         <div class="svc-media reveal-right">
           <div class="svc-img-frame">
@@ -216,7 +222,7 @@
             <div class="corp-logo-item logo-pill">NGOs</div>
             <div class="corp-logo-item logo-pill">Gov. Bodies</div>
           </div>
-          <a href="index.html#contact" class="btn btn-primary">Plan Corporate Event</a>
+          <button class="btn btn-primary query-btn" data-service="Corporate Gatherings">Send a Query ◆</button>
         </div>
       </div>
     </section>
@@ -256,7 +262,7 @@
               </div>
             </div>
           </div>
-          <a href="index.html#contact" class="btn btn-primary">Plan Your Birthday</a>
+          <button class="btn btn-primary query-btn" data-service="Birthday Celebrations">Send a Query ◆</button>
         </div>
         <div class="svc-media reveal-right">
           <div class="svc-img-frame">
@@ -310,7 +316,7 @@
               <p id="decorStyleText">Lush florals, candlelight, draped silks, and soft gold — a world designed for love and warmth.</p>
             </div>
           </div>
-          <a href="index.html#contact" class="btn btn-primary">Design My Event</a>
+          <button class="btn btn-primary query-btn" data-service="Luxury Decoration">Send a Query ◆</button>
         </div>
       </div>
     </section>
@@ -359,7 +365,7 @@
               <span>Experiences</span>
             </div>
           </div>
-          <a href="index.html#contact" class="btn btn-primary">Book Entertainment</a>
+          <button class="btn btn-primary query-btn" data-service="Entertainment Management">Send a Query ◆</button>
         </div>
         <div class="svc-media reveal-right">
           <div class="svc-img-frame">
@@ -523,6 +529,226 @@
   </main>
 
   <!-- ══════════════════════════════════════
+       QUERY POPUP MODAL
+  ══════════════════════════════════════ -->
+  <div class="query-modal" id="queryModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-panel" id="modalPanel">
+
+      <!-- Decorative left strip -->
+      <div class="modal-strip">
+        <span class="modal-strip-text">Ceremony Squad</span>
+      </div>
+
+      <!-- Close -->
+      <button class="modal-close" id="modalClose" aria-label="Close popup">
+        <span></span><span></span>
+      </button>
+
+      <!-- Header -->
+      <div class="modal-head">
+        <p class="modal-eyebrow" id="modalEyebrow">Service Enquiry</p>
+        <h2 class="modal-title" id="modalTitle">Send a Query</h2>
+        <p class="modal-subtitle">Tell us about your event and we'll respond within 24 hours.</p>
+      </div>
+
+      <!-- Progress steps -->
+      <div class="modal-steps">
+        <div class="mstep active" data-step="1">
+          <span class="mstep-num">1</span>
+          <span class="mstep-label">Your Details</span>
+        </div>
+        <div class="mstep-line"></div>
+        <div class="mstep" data-step="2">
+          <span class="mstep-num">2</span>
+          <span class="mstep-label">Event Info</span>
+        </div>
+        <div class="mstep-line"></div>
+        <div class="mstep" data-step="3">
+          <span class="mstep-num">3</span>
+          <span class="mstep-label">Your Vision</span>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form class="modal-form" id="queryForm" novalidate>
+
+        <!-- STEP 1 — Personal Details -->
+        <div class="modal-step-content active" data-step="1">
+          <div class="mform-row">
+            <div class="mform-group">
+              <label for="mFirstName">First Name <span class="mreq">*</span></label>
+              <input type="text" id="mFirstName" name="firstName" placeholder="Priya" autocomplete="given-name" />
+              <span class="mform-error" id="mFirstNameErr"></span>
+            </div>
+            <div class="mform-group">
+              <label for="mLastName">Last Name <span class="mreq">*</span></label>
+              <input type="text" id="mLastName" name="lastName" placeholder="Sharma" autocomplete="family-name" />
+              <span class="mform-error" id="mLastNameErr"></span>
+            </div>
+          </div>
+          <div class="mform-row">
+            <div class="mform-group">
+              <label for="mEmail">Email <span class="mreq">*</span></label>
+              <input type="email" id="mEmail" name="email" placeholder="you@example.com" autocomplete="email" />
+              <span class="mform-error" id="mEmailErr"></span>
+            </div>
+            <div class="mform-group">
+              <label for="mPhone">WhatsApp / Phone <span class="mreq">*</span></label>
+              <input type="tel" id="mPhone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" />
+              <span class="mform-error" id="mPhoneErr"></span>
+            </div>
+          </div>
+          <div class="mform-group">
+            <label>Preferred Contact Method</label>
+            <div class="mradio-group">
+              <label class="mradio-label">
+                <input type="radio" name="contactMethod" value="whatsapp" checked />
+                <span class="mradio-custom"></span>
+                WhatsApp
+              </label>
+              <label class="mradio-label">
+                <input type="radio" name="contactMethod" value="call" />
+                <span class="mradio-custom"></span>
+                Phone Call
+              </label>
+              <label class="mradio-label">
+                <input type="radio" name="contactMethod" value="email" />
+                <span class="mradio-custom"></span>
+                Email
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2 — Event Info -->
+        <div class="modal-step-content" data-step="2">
+          <div class="mform-group">
+            <label for="mService">Service Required <span class="mreq">*</span></label>
+            <div class="mselect-wrap">
+              <select id="mService" name="service">
+                <option value="">Select a service…</option>
+                <option value="Wedding Planning">Wedding Planning</option>
+                <option value="Destination Events">Destination Events</option>
+                <option value="Corporate Gatherings">Corporate Gatherings</option>
+                <option value="Birthday Celebrations">Birthday Celebrations</option>
+                <option value="Luxury Decoration">Luxury Decoration</option>
+                <option value="Entertainment Management">Entertainment Management</option>
+              </select>
+              <span class="mselect-arrow">↓</span>
+            </div>
+            <span class="mform-error" id="mServiceErr"></span>
+          </div>
+          <div class="mform-row">
+            <div class="mform-group">
+              <label for="mDate">Event Date</label>
+              <input type="date" id="mDate" name="eventDate" />
+            </div>
+            <div class="mform-group">
+              <label for="mGuests">No. of Guests</label>
+              <div class="mselect-wrap">
+                <select id="mGuests" name="guests">
+                  <option value="">Select range…</option>
+                  <option>Under 50</option>
+                  <option>50 – 100</option>
+                  <option>100 – 300</option>
+                  <option>300 – 500</option>
+                  <option>500+</option>
+                </select>
+                <span class="mselect-arrow">↓</span>
+              </div>
+            </div>
+          </div>
+          <div class="mform-group">
+            <label for="mBudget">Budget Range</label>
+            <div class="mselect-wrap">
+              <select id="mBudget" name="budget">
+                <option value="">Select budget…</option>
+                <option>Under ₹2 Lakhs</option>
+                <option>₹2 – ₹5 Lakhs</option>
+                <option>₹5 – ₹10 Lakhs</option>
+                <option>₹10 – ₹25 Lakhs</option>
+                <option>₹25 Lakhs+</option>
+                <option>Prefer to discuss</option>
+              </select>
+              <span class="mselect-arrow">↓</span>
+            </div>
+          </div>
+          <div class="mform-group">
+            <label for="mVenue">Preferred Venue / Location</label>
+            <input type="text" id="mVenue" name="venue" placeholder="e.g. Delhi, Udaipur, Maldives…" />
+          </div>
+        </div>
+
+        <!-- STEP 3 — Vision -->
+        <div class="modal-step-content" data-step="3">
+          <div class="mform-group">
+            <label for="mMessage">Tell us about your dream event <span class="mreq">*</span></label>
+            <textarea id="mMessage" name="message" rows="5" placeholder="Share the mood, theme, or any specific ideas you have in mind. The more you tell us, the better we can serve you…"></textarea>
+            <span class="mform-error" id="mMessageErr"></span>
+            <span class="mchar-count" id="mCharCount">0 / 600</span>
+          </div>
+          <div class="mform-group">
+            <label for="mSource">How did you hear about us?</label>
+            <div class="mselect-wrap">
+              <select id="mSource" name="source">
+                <option value="">Select…</option>
+                <option>Instagram</option>
+                <option>Google Search</option>
+                <option>Word of Mouth</option>
+                <option>WedMeGood / WeddingWire</option>
+                <option>Facebook</option>
+                <option>Previous Client</option>
+                <option>Other</option>
+              </select>
+              <span class="mselect-arrow">↓</span>
+            </div>
+          </div>
+          <div class="mform-group mcheck-group">
+            <label class="mcheck-label">
+              <input type="checkbox" name="newsletter" id="mNewsletter" />
+              <span class="mcheck-custom"></span>
+              Subscribe to our newsletter for event inspiration &amp; exclusive offers
+            </label>
+          </div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <div class="modal-nav">
+          <button type="button" class="mbtn mbtn-ghost" id="modalPrev" style="visibility:hidden">← Back</button>
+          <div class="modal-step-dots" id="modalDots">
+            <span class="mdot active"></span>
+            <span class="mdot"></span>
+            <span class="mdot"></span>
+          </div>
+          <button type="button" class="mbtn mbtn-primary" id="modalNext">Next Step →</button>
+        </div>
+
+      </form>
+
+      <!-- Success Screen -->
+      <div class="modal-success" id="modalSuccess">
+        <div class="msuccess-icon">
+          <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="26" cy="26" r="25" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M14 26l8 8 16-16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Query Sent!</h3>
+        <p>Thank you for reaching out. Our team will get back to you within <strong>24 hours</strong>. We're excited to learn more about your vision.</p>
+        <div class="msuccess-actions">
+          <a href="https://wa.me/9229253636?text=Hello%20Ceremony%20Squad!" target="_blank" class="mbtn mbtn-wa">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat on WhatsApp
+          </a>
+          <button class="mbtn mbtn-ghost" id="modalSuccessClose">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
        FOOTER
   ══════════════════════════════════════ -->
   <footer class="footer">
@@ -544,8 +770,7 @@
           <li><a href="#destination">Destination Events</a></li>
           <li><a href="#corporate">Corporate Gatherings</a></li>
           <li><a href="#birthday">Birthday Celebrations</a></li>
-          <li><a href="#decor">Luxury Decoration</a></li>
-          <li><a href="#entertainment">Entertainment</a></li>
+          <li><a href="#decor">Luxury Decoration</a></li>          <li><a href="#entertainment">Entertainment</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -562,8 +787,8 @@
         <h4>Contact</h4>
         <ul>
           <li>14 Lodhi Estate, New Delhi — 110003</li>
-          <li>+91 98765 43210</li>
-          <li>hello@ceremonysquad.com</li>
+          <li>+91 9229253636</li>
+          <li>shikhakumari3296@gmail.com</li>
         </ul>
       </div>
     </div>
