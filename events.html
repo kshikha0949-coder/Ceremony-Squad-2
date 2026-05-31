@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ceremony Squad Events – Browse upcoming weddings, galas, corporate events and celebrations. Book your tickets now." />
+  <title>Events | Ceremony Squad</title>
+  <link rel="stylesheet" href="events.css" />
+  <noscript>
+    <style>
+      .reveal-up,.reveal-left,.reveal-right{opacity:1!important;transform:none!important;}
+      .animate-in{opacity:1!important;transform:none!important;animation:none!important;}
+    </style>
+  </noscript>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Page Veil -->
+  <div class="page-veil" id="pageVeil"></div>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/9229253636?text=Hello%20Ceremony%20Squad!%20I%20am%20interested%20in%20booking%20tickets%20for%20an%20event."
+     class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="wa-tooltip">Chat on WhatsApp</span>
+    <span class="wa-pulse"></span>
+  </a>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">&#8679;</button>
+
+  <!-- ═══════════════════════════
+       HEADER
+  ═══════════════════════════ -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">Ceremony<span>Squad</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="events.html" class="nav-active">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════
+         HERO
+    ═══════════════════════════ -->
+    <section class="ev-hero">
+      <div class="ev-hero-bg">
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1800&q=80" alt="Events" class="hero-img" />
+        <div class="hero-overlay"></div>
+        <div class="grain"></div>
+      </div>
+      <div class="hero-content container">
+        <p class="eyebrow animate-in delay-0">— Upcoming Celebrations —</p>
+        <h1 class="hero-title animate-in delay-1">Events That<br /><em>Move You.</em></h1>
+        <div class="hero-rule animate-in delay-2"></div>
+        <p class="hero-sub animate-in delay-3">Discover, attend, and be part of extraordinary celebrations curated by Ceremony Squad. From grand weddings to intimate galas — find your next unforgettable experience.</p>
+        <div class="hero-actions animate-in delay-4">
+          <a href="#events-grid" class="btn btn-primary">Browse Events</a>
+          <a href="https://wa.me/9229253636?text=Hello!%20I%20want%20to%20know%20about%20upcoming%20events." target="_blank" class="btn btn-wa">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Ask on WhatsApp
+          </a>
+        </div>
+      </div>
+      <!-- Floating stats -->
+      <div class="hero-stats animate-in delay-5">
+        <div class="hstat"><span class="hstat-n">24</span><span class="hstat-l">Upcoming Events</span></div>
+        <div class="hstat-sep"></div>
+        <div class="hstat"><span class="hstat-n">8</span><span class="hstat-l">Cities</span></div>
+        <div class="hstat-sep"></div>
+        <div class="hstat"><span class="hstat-n">6</span><span class="hstat-l">Event Types</span></div>
+        <div class="hstat-sep"></div>
+        <div class="hstat"><span class="hstat-n">500+</span><span class="hstat-l">Seats Available</span></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         FEATURED / SPOTLIGHT
+    ═══════════════════════════ -->
+    <section class="spotlight section">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <p class="section-eyebrow">Don't Miss</p>
+          <h2 class="section-title">Featured <em>Events</em></h2>
+        </div>
+        <div class="spotlight-grid">
+          <div class="spotlight-main reveal-left">
+            <div class="spotlight-img">
+              <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80" alt="Grand Wedding Gala" loading="lazy"/>
+              <div class="spotlight-badge">Featured</div>
+              <div class="spotlight-date-pill">14 Jun 2026</div>
+            </div>
+            <div class="spotlight-body">
+              <span class="ev-tag wedding">Wedding</span>
+              <h3>The Kapoor–Mehta Grand Wedding Gala</h3>
+              <p>Three days of curated ceremonies, floral pavilions, and live orchestral performances at the Leela Palace. An event you'll tell your grandchildren about.</p>
+              <div class="spotlight-meta">
+                <span>&#128205; Leela Palace, Udaipur</span>
+                <span>&#128197; 14–16 June 2026</span>
+                <span>&#127891; 350 Seats</span>
+              </div>
+              <div class="spotlight-footer">
+                <div class="price-wrap">
+                  <span class="price-from">From</span>
+                  <span class="price">₹4,500</span>
+                  <span class="price-per">/ person</span>
+                </div>
+                <button class="btn btn-primary book-btn" data-event="The Kapoor–Mehta Grand Wedding Gala" data-price="4500" data-date="14–16 June 2026" data-city="Udaipur" data-type="Wedding" data-seats="350" data-img="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&q=80">Book Tickets</button>
+              </div>
+            </div>
+          </div>
+          <div class="spotlight-side">
+            <div class="spotlight-small reveal-up">
+              <div class="ss-img">
+                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80" alt="Corporate Gala" loading="lazy"/>
+                <div class="spotlight-date-pill">22 Jul 2026</div>
+              </div>
+              <div class="ss-body">
+                <span class="ev-tag corporate">Corporate</span>
+                <h4>Horizon Tech Annual Gala 2026</h4>
+                <div class="ss-meta"><span>&#128205; The Oberoi, Mumbai</span></div>
+                <div class="ss-footer">
+                  <span class="price">₹3,200 <small>/person</small></span>
+                  <button class="btn-sm book-btn" data-event="Horizon Tech Annual Gala 2026" data-price="3200" data-date="22 July 2026" data-city="Mumbai" data-type="Corporate" data-seats="400" data-img="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&q=80">Book →</button>
+                </div>
+              </div>
+            </div>
+            <div class="spotlight-small reveal-up delay-1">
+              <div class="ss-img">
+                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&q=80" alt="Sunset Soiree" loading="lazy"/>
+                <div class="spotlight-date-pill">5 Sep 2026</div>
+              </div>
+              <div class="ss-body">
+                <span class="ev-tag luxury">Luxury Event</span>
+                <h4>Maldives Sunset Soirée</h4>
+                <div class="ss-meta"><span>&#128205; Velaa Island, Maldives</span></div>
+                <div class="ss-footer">
+                  <span class="price">₹12,000 <small>/person</small></span>
+                  <button class="btn-sm book-btn" data-event="Maldives Sunset Soirée" data-price="12000" data-date="5 September 2026" data-city="Maldives" data-type="Luxury Event" data-seats="80" data-img="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&q=80">Book →</button>
+                </div>
+              </div>
+            </div>
+            <div class="spotlight-small reveal-up delay-2">
+              <div class="ss-img">
+                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500&q=80" alt="Birthday Gala" loading="lazy"/>
+                <div class="spotlight-date-pill">18 Aug 2026</div>
+              </div>
+              <div class="ss-body">
+                <span class="ev-tag birthday">Birthday</span>
+                <h4>Sunita's Grand 50th Soirée</h4>
+                <div class="ss-meta"><span>&#128205; ITC Grand, Jaipur</span></div>
+                <div class="ss-footer">
+                  <span class="price">₹2,800 <small>/person</small></span>
+                  <button class="btn-sm book-btn" data-event="Sunita's Grand 50th Soirée" data-price="2800" data-date="18 August 2026" data-city="Jaipur" data-type="Birthday" data-seats="120" data-img="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&q=80">Book →</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         FILTER + ALL EVENTS
+    ═══════════════════════════ -->
+    <section class="events-section section section-tinted" id="events-grid">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <p class="section-eyebrow">All Events</p>
+          <h2 class="section-title">Upcoming <em>Celebrations</em></h2>
+          <p class="section-sub">Filter by date, city, or event type to find your perfect celebration.</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar reveal-up" id="filterBar">
+          <!-- Search -->
+          <div class="filter-search">
+            <span class="search-icon">&#128269;</span>
+            <input type="text" id="searchInput" placeholder="Search events…" aria-label="Search events" />
+            <button class="search-clear" id="searchClear" aria-label="Clear search">×</button>
+          </div>
+
+          <!-- Type filter -->
+          <div class="filter-group">
+            <label class="filter-label">Type</label>
+            <div class="filter-pills" id="typeFilter">
+              <button class="fpill active" data-type="all">All</button>
+              <button class="fpill" data-type="Wedding">Wedding</button>
+              <button class="fpill" data-type="Corporate">Corporate</button>
+              <button class="fpill" data-type="Birthday">Birthday</button>
+              <button class="fpill" data-type="Luxury Event">Luxury</button>
+              <button class="fpill" data-type="Destination">Destination</button>
+              <button class="fpill" data-type="Gala">Gala</button>
+            </div>
+          </div>
+
+          <!-- City filter -->
+          <div class="filter-group">
+            <label class="filter-label">City</label>
+            <div class="filter-select-wrap">
+              <select id="cityFilter" aria-label="Filter by city">
+                <option value="all">All Cities</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Udaipur">Udaipur</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Goa">Goa</option>
+                <option value="Maldives">Maldives</option>
+                <option value="Tuscany">Tuscany</option>
+              </select>
+              <span class="fsel-arrow">↓</span>
+            </div>
+          </div
+          
+          <!-- Month filter -->
+          <div class="filter-group">
+            <label class="filter-label">Month</label>
+            <div class="filter-select-wrap">
+              <select id="monthFilter" aria-label="Filter by month">
+                <option value="all">All Months</option>
+                <option value="6">June 2026</option>
+                <option value="7">July 2026</option>
+                <option value="8">August 2026</option>
+                <option value="9">September 2026</option>
+                <option value="10">October 2026</option>
+                <option value="11">November 2026</option>
+                <option value="12">December 2026</option>
+              </select>
+              <span class="fsel-arrow">↓</span>
+            </div>
+          </div>
+
+          <!-- Price filter -->
+          <div class="filter-group">
+            <label class="filter-label">Budget</label>
+            <div class="filter-select-wrap">
+              <select id="priceFilter" aria-label="Filter by price">
+                <option value="all">Any Price</option>
+                <option value="0-3000">Under ₹3,000</option>
+                <option value="3000-6000">₹3,000 – ₹6,000</option>
+                <option value="6000-15000">₹6,000 – ₹15,000</option>
+                <option value="15000+">₹15,000+</option>
+              </select>
+              <span class="fsel-arrow">↓</span>
+            </div>
+          </div>
+
+          <!-- Sort -->
+          <div class="filter-group">
+            <label class="filter-label">Sort</label>
+            <div class="filter-select-wrap">
+              <select id="sortFilter" aria-label="Sort events">
+                <option value="date-asc">Date: Soonest</option>
+                <option value="date-desc">Date: Latest</option>
+                <option value="price-asc">Price: Low–High</option>
+                <option value="price-desc">Price: High–Low</option>
+              </select>
+              <span class="fsel-arrow">↓</span>
+            </div>
+          </div>
+
+          <button class="btn-reset" id="resetFilters">Reset All</button>
+        </div>
+
+        <!-- Results count -->
+        <div class="results-bar reveal-up">
+          <span id="resultsCount">Showing all events</span>
+          <div class="view-toggle">
+            <button class="view-btn active" id="gridView" aria-label="Grid view">&#9632;&#9632;</button>
+            <button class="view-btn" id="listView" aria-label="List view">&#9776;</button>
+          </div>
+        </div>
+
+        <!-- Events Grid -->
+        <div class="events-grid" id="eventsGrid">
+          <!-- Injected by JS -->
+        </div>
+
+        <!-- No Results -->
+        <div class="no-results" id="noResults" style="display:none">
+          <span class="no-results-icon">◈</span>
+          <h3>No Events Found</h3>
+          <p>Try adjusting your filters or <a href="contact.html">contact us</a> to enquire about private events.</p>
+          <button class="btn btn-primary" id="resetFromEmpty">Clear All Filters</button>
+        </div>
+
+        <!-- Load More -->
+        <div class="load-more-wrap" id="loadMoreWrap">
+          <button class="btn-load-more" id="loadMoreBtn">Load More Events <span>↓</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         CALENDAR STRIP
+    ═══════════════════════════ -->
+    <section class="calendar-strip section">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <p class="section-eyebrow">Plan Ahead</p>
+          <h2 class="section-title">Event <em>Calendar</em></h2>
+        </div>
+        <div class="cal-months reveal-up" id="calStrip"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         WHY ATTEND
+    ═══════════════════════════ -->
+    <section class="why-attend section section-tinted">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <p class="section-eyebrow">The Experience</p>
+          <h2 class="section-title">Why Attend a<br /><em>Ceremony Squad Event</em></h2>
+        </div>
+        <div class="why-grid">
+          <div class="why-card reveal-up">
+            <div class="why-icon">◆</div>
+            <h3>World-Class Curation</h3>
+            <p>Every event is planned with our signature attention to detail — venue, décor, entertainment, and catering all at premium standard.</p>
+          </div>
+          <div class="why-card reveal-up delay-1">
+            <div class="why-icon">✦</div>
+            <h3>Exclusive Access</h3>
+            <p>Many of our events are invitation-only or limited-seat. Book early to secure your place at the season's most sought-after celebrations.</p>
+          </div>
+          <div class="why-card reveal-up delay-2">
+            <div class="why-icon">◉</div>
+            <h3>Memorable Moments</h3>
+            <p>From live orchestras to Michelin-chef menus and floral installations — our events are designed to be experienced, not just attended.</p>
+          </div>
+          <div class="why-card reveal-up delay-3">
+            <div class="why-icon">❋</div>
+            <h3>Seamless Experience</h3>
+            <p>Arrive and enjoy. Our event-day teams handle every detail so guests can be fully present in the moment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         NEWSLETTER / NOTIFY
+    ═══════════════════════════ -->
+    <section class="notify-section section">
+      <div class="container notify-inner reveal-up">
+        <div class="notify-content">
+          <p class="section-eyebrow">Never Miss Out</p>
+          <h2 class="notify-title">Get Event Alerts<br /><em>Before Anyone Else.</em></h2>
+          <p class="notify-sub">Subscribe to our events newsletter and get early access to tickets, exclusive invitations, and behind-the-scenes updates.</p>
+        </div>
+        <form class="notify-form" id="notifyForm">
+          <div class="notify-fields">
+            <input type="text" id="notifyName" placeholder="Your name" required />
+            <input type="email" id="notifyEmail" placeholder="Your email address" required />
+            <div class="notify-select-wrap">
+              <select id="notifyCity" aria-label="Your city">
+                <option value="">Your city…</option>
+                <option>Delhi</option>
+                <option>Mumbai</option>
+                <option>Jaipur</option>
+                <option>Bangalore</option>
+                <option>Goa</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Subscribe to Events</button>
+          <p class="notify-success" id="notifySuccess">🎉 You're on the list! We'll keep you posted.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════
+       BOOK TICKET MODAL
+  ═══════════════════════════ -->
+  <div class="ticket-modal" id="ticketModal" role="dialog" aria-modal="true" aria-labelledby="ticketModalTitle">
+    <div class="tm-backdrop" id="tmBackdrop"></div>
+    <div class="tm-panel" id="tmPanel">
+
+      <button class="tm-close" id="tmClose" aria-label="Close">
+        <span></span><span></span>
+      </button>
+
+      <div class="tm-left">
+        <div class="tm-img-wrap">
+          <img src="" alt="" id="tmImg" />
+          <div class="tm-img-overlay"></div>
+        </div>
+        <div class="tm-event-info">
+          <span class="tm-tag" id="tmTag">Wedding</span>
+          <h2 class="tm-event-name" id="ticketModalTitle">Event Name</h2>
+          <div class="tm-event-meta">
+            <span id="tmDate">&#128197; Date</span>
+            <span id="tmCity">&#128205; City</span>
+          </div>
+          <div class="tm-price-display">
+            <span class="tm-from">Price per person</span>
+            <span class="tm-price" id="tmPrice">₹4,500</span>
+          </div>
+          <div class="tm-seats-left" id="tmSeats"></div>
+          <!-- WhatsApp CTA inside modal -->
+          <a href="#" class="tm-wa-link" id="tmWaLink" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Have questions? Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="tm-right">
+        <div class="tm-steps">
+          <div class="tm-step active" data-step="1"><span>1</span> Your Details</div>
+          <div class="tm-step-line"></div>
+          <div class="tm-step" data-step="2"><span>2</span> Tickets</div>
+          <div class="tm-step-line"></div>
+          <div class="tm-step" data-step="3"><span>3</span> Confirm</div>
+        </div>
+        <form class="tm-form" id="tmForm" novalidate>
+          <!-- Step 1: Details -->
+          <div class="tm-step-content active" data-step="1">
+            <h3 class="tm-step-title">Your Details</h3>
+            <div class="tm-row">
+              <div class="tm-group">
+                <label>First Name <span class="treq">*</span></label>
+                <input type="text" id="tFirstName" placeholder="Priya" />
+                <span class="tm-err" id="tFirstNameErr"></span>
+              </div>
+              <div class="tm-group">
+                <label>Last Name <span class="treq">*</span></label>
+                <input type="text" id="tLastName" placeholder="Sharma" />
+                <span class="tm-err" id="tLastNameErr"></span>
+              </div>
+            </div>
+            <div class="tm-group">
+              <label>Email Address <span class="treq">*</span></label>
+              <input type="email" id="tEmail" placeholder="you@example.com" />
+              <span class="tm-err" id="tEmailErr"></span>
+            </div>
+            <div class="tm-group">
+              <label>Phone / WhatsApp <span class="treq">*</span></label>
+              <input type="tel" id="tPhone" placeholder="+91 98765 43210" />
+              <span class="tm-err" id="tPhoneErr"></span>
+            </div>
+            <div class="tm-group">
+              <label>City</label>
+              <input type="text" id="tCity" placeholder="Your city" />
+            </div>
+          </div>
+
+          <!-- Step 2: Tickets -->
+          <div class="tm-step-content" data-step="2">
+            <h3 class="tm-step-title">Select Tickets</h3>
+            <div class="ticket-types" id="ticketTypes">
+              <div class="ticket-type-card selected" data-ticket="standard" data-multiplier="1">
+                <div class="ttc-top">
+                  <div>
+                    <span class="ttc-name">Standard</span>
+                    <span class="ttc-desc">General admission with full event access</span>
+                  </div>
+                  <span class="ttc-price" id="stdPrice">₹4,500</span>
+                </div>
+                <div class="ttc-check">✓</div>
+              </div>
+              <div class="ticket-type-card" data-ticket="premium" data-multiplier="1.6">
+                <div class="ttc-top">
+                  <div>
+                    <span class="ttc-name">Premium</span>
+                    <span class="ttc-desc">Priority seating + welcome drinks</span>
+                  </div>
+                  <span class="ttc-price" id="premPrice">₹7,200</span>
+                </div>
+                <div class="ttc-check">✓</div>
+              </div>
+              <div class="ticket-type-card" data-ticket="vip" data-multiplier="2.5">
+                <div class="ttc-top">
+                  <div>
+                    <span class="ttc-name">VIP Table</span>
+                    <span class="ttc-desc">Private table + 3-course dinner + champagne</span>
+                  </div>
+                  <span class="ttc-price" id="vipPrice">₹11,250</span>
+                </div>
+                <div class="ttc-check">✓</div>
+              </div>
+            </div>
+            <div class="qty-row">
+              <label>Number of Tickets</label>
+              <div class="qty-control">
+                <button type="button" class="qty-btn" id="qtyMinus">−</button>
+                <span class="qty-num" id="qtyNum">1</span>
+                <button type="button" class="qty-btn" id="qtyPlus">+</button>
+              </div>
+            </div>
+            <div class="order-summary" id="orderSummary">
+              <div class="os-row"><span>Ticket Type</span><span id="osTtype">Standard</span></div>
+              <div class="os-row"><span>Quantity</span><span id="osQty">1</span></div>
+              <div class="os-row"><span>Price per ticket</span><span id="osUnit">₹4,500</span></div>
+              <div class="os-row os-row--total"><span>Total</span><span id="osTotal">₹4,500</span></div>
+            </div>
+          </div>
+
+          <!-- Step 3: Confirm -->
+          <div class="tm-step-content" data-step="3">
+            <h3 class="tm-step-title">Review & Confirm</h3>
+            <div class="confirm-summary" id="confirmSummary">
+              <!-- Filled by JS -->
+            </div>
+            <div class="tm-group">
+              <label>Special Requirements / Dietary Needs</label>
+              <textarea id="tSpecial" rows="3" placeholder="Vegetarian, wheelchair access, allergies…"></textarea>
+            </div>
+            <div class="tm-check-group">
+              <label class="tm-check-label">
+                <input type="checkbox" id="tTerms" />
+                <span class="tm-check-custom"></span>
+                I agree to the <a href="#" class="tc-link">Terms & Conditions</a> and <a href="#" class="tc-link">Cancellation Policy</a>
+              </label>
+              <span class="tm-err" id="tTermsErr"></span>
+            </div>
+            <div class="tm-check-group">
+              <label class="tm-check-label">
+                <input type="checkbox" id="tNewsletter" />
+                <span class="tm-check-custom"></span>
+                Keep me informed about future Ceremony Squad events
+              </label>
+            </div>
+          </div>
+
+        </form>
+
+        <!-- Nav -->
+        <div class="tm-nav">
+          <button type="button" class="tbtn tbtn-ghost" id="tmPrev" style="visibility:hidden">← Back</button>
+          <div class="tm-dots">
+            <span class="tdot active"></span>
+            <span class="tdot"></span>
+            <span class="tdot"></span>
+          </div>
+          <button type="button" class="tbtn tbtn-primary" id="tmNext">Next →</button>
+        </div>
+
+        <!-- Success -->
+        <div class="tm-success" id="tmSuccess">
+          <div class="tms-icon">
+            <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="26" cy="26" r="25" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M14 26l8 8 16-16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Booking Confirmed!</h3>
+          <p id="tmsMsg">Your tickets are confirmed. A confirmation email will be sent to you shortly.</p>
+          <div class="tms-ref">Ref: <strong id="tmsRef">CS-2026-XXXX</strong></div>
+          <div class="tms-actions">
+            <a href="#" id="tmsWa" target="_blank" class="tbtn tbtn-wa">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Share on WhatsApp
+            </a>
+            <button class="tbtn tbtn-ghost" id="tmSuccessClose">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════
+       FOOTER
+  ═══════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Ceremony<span>Squad</span></a>
+        <p>Crafting timeless celebrations with elegance, precision, and heart since 2022.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram">Ig</a>
+          <a href="#" class="social-link" aria-label="Facebook">Fb</a>
+          <a href="#" class="social-link" aria-label="Pinterest">Pt</a>
+          <a href="#" class="social-link" aria-label="YouTube">Yt</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Event Types</h4>
+        <ul>
+          <li><a href="#">Weddings</a></li>
+          <li><a href="#">Corporate Galas</a></li>
+          <li><a href="#">Birthday Parties</a></li>
+          <li><a href="#">Luxury Events</a></li>
+          <li><a href="#">Destination Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>14 Lodhi Estate, New Delhi</li>
+          <li><a href="tel:+91 9229253636">+91 92292 53636</a></li>
+          <li><a href="mailto:hello@ceremonysquad.com">hello@ceremonysquad.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Ceremony Squad. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="events.js"></script>
+</body>
+</html>
